@@ -1,0 +1,111 @@
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.back-bar {
+    text-align: center;
+    padding: 0.6rem 1rem;
+    background: #0f172a;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.35);
+}
+.back-bar a {
+    color: #06b6d4;
+    text-decoration: none;
+    font-weight: 600;
+}
+.back-bar a:hover {
+    color: #22d3ee;
+}
+
+.container {
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #06b6d4;
+    font-family: 'Sora', 'DM Sans', sans-serif;
+    font-weight: 600;
+}
+
+.black {
+    color: #1e293b;
+}
+
+.red {
+    color: #f43f5e;
+}
+
+h3 {
+    color: #e2e8f0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.input-group>.input-group-prepend {
+    flex: 0 0 45%;
+}
+.input-group .input-group-text {
+    width: 100%;
+    border-style: none;
+}
+
+.input-group .input-group-text .lightup {
+    width: 100%;
+    border-style: none;
+    background-color: #ffc107;
+}
+
+#card-div {
+    height: 180px;
+    text-align: center;
+}
+
+#banker-text, #player-text {
+    text-align: center;
+}
+
+#form-div {
+    margin: 20px;
+}
+
+#card-display {
+    height: 120px;
+}
+
+#buttons-div {
+    height: 50px;
+    margin:20px;
+}
+
+#buttons-2 {
+    text-align: right;
+}
+
+/* Chips display - readable on light card */
+#chip-header,
+.card-header#chip-header {
+    color: #1a1a2e !important;
+    font-weight: 700;
+    background: #e8e6ed;
+}
+#chip-title,
+.card-title#chip-title {
+    color: #1a1a2e !important;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+#card-display .card-body {
+    background: #e8e6ed;
+    color: #1a1a2e;
+}
+

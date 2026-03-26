@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../../favi.ico">
+  <title>Golden Wheel Roulette Max | Zimora</title>
+  <meta name="description" content="Golden Wheel Hi-Lo Max — guess higher or lower with virtual coins only. Entertainment only. March 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: linear-gradient(165deg, #0f172a 0%, #1e1b4b 45%, #0f172a 100%);
+      color: #e2e8f0;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      padding: 0.65rem 1rem;
+      background: #06040c;
+      border-bottom: 1px solid rgba(183, 125, 255, 0.22);
+    }
+    .bar a { color: #5dffc9; text-decoration: none; font-weight: 700; }
+    .bar a:hover { filter: brightness(1.08); }
+    /* Hero art: ../../assets/dice.webp — replace dice.webp in site /assets for Hi-Lo branding */
+    .lounge-hero {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .lounge-hero img {
+      width: 100%;
+      height: auto;
+      max-height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      display: block;
+    }
+    .wrap {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 2rem;
+    }
+    h1 {
+      font-size: 1.35rem;
+      margin: 0 0 0.25rem;
+      color: #fbbf24;
+      text-align: center;
+    }
+    .sub {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-bottom: 1.25rem;
+    }
+    .panel {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(251, 191, 36, 0.25);
+      border-radius: 14px;
+      padding: 1.25rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+    }
+    .balance {
+      text-align: center;
+      font-weight: 700;
+      color: #22d3ee;
+      margin-bottom: 1rem;
+    }
+    .card-slot {
+      text-align: center;
+      padding: 1.5rem;
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      border-radius: 10px;
+      border: 2px solid rgba(6, 182, 212, 0.3);
+      margin-bottom: 1rem;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-face {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+    .card-face small { display: block; font-size: 0.9rem; color: #94a3b8; margin-top: 0.35rem; }
+    .msg {
+      text-align: center;
+      min-height: 1.5rem;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      margin-bottom: 0.75rem;
+    }
+    .bet-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .bet-row button {
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      background: rgba(251, 191, 36, 0.12);
+      color: #fbbf24;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .bet-row button.active {
+      background: rgba(251, 191, 36, 0.35);
+      color: #0f172a;
+    }
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+    }
+    .actions button {
+      padding: 0.85rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn-hi {
+      background: linear-gradient(180deg, #22c55e, #15803d);
+      color: #fff;
+    }
+    .btn-lo {
+      background: linear-gradient(180deg, #e11d48, #9f1239);
+      color: #fff;
+    }
+    .btn-hi:disabled, .btn-lo:disabled, .bet-row button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+    .btn-deal {
+      grid-column: 1 / -1;
+      background: linear-gradient(180deg, #06b6d4, #0891b2);
+      color: #0f172a;
+    }
+    .note {
+      margin-top: 1rem;
+      font-size: 0.72rem;
+      color: #64748b;
+      text-align: center;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <span style="color:#c9c2d8;font-size:0.88rem;font-weight:700;">
+  <img src="../../assets/logo.webp" alt="" style="height:22px;vertical-align:middle;margin-right:6px;object-fit:contain">
+  Zimora · Golden Wheel Roulette Max
+    </span>
+  <a href="../../games.html" style="color:#5dffc9;text-decoration:none;font-weight:700;">← Zimora lobby</a>
+  </div>
+  <div class="lounge-hero">
+    <img src="../../assets/dice.webp" alt="" width="520" height="300" loading="lazy">
+  </div>
+  <div class="wrap">
+    <h1>Golden Wheel Roulette Max</h1>
+    <p class="sub">Virtual coins · Ace is high · Match = push</p>
+    <div class="panel">
+      <div class="balance">Credits: <span id="bal">500</span></div>
+      <div class="card-slot">
+        <div class="card-face" id="cardDisplay">—<small>Deal to start</small></div>
+      </div>
+      <p class="msg" id="msg"></p>
+      <div class="bet-row" id="betRow">
+        <button type="button" data-bet="10">Coins 10</button>
+        <button type="button" data-bet="25" class="active">Coins 25</button>
+        <button type="button" data-bet="50">Coins 50</button>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn-hi" id="btnHi" disabled>Higher</button>
+        <button type="button" class="btn-lo" id="btnLo" disabled>Lower</button>
+        <button type="button" class="btn-deal" id="btnDeal">New round / Deal</button>
+      </div>
+    </div>
+    <p class="note">18+ · Free to play · Entertainment only · Virtual coins only</p>
+  </div>
+  <script>
+(function () {
+  const RANKS = [2,3,4,5,6,7,8,9,10,11,12,13,14];
+  const LABEL = { 11: 'J', 12: 'Q', 13: 'K', 14: 'A' };
+  let balance = 500;
+  let bet = 25;
+  let current = null;
+  let phase = 'idle';
+
+  const balEl = document.getElementById('bal');
+  const cardEl = document.getElementById('cardDisplay');
+  const msgEl = document.getElementById('msg');
+  const btnHi = document.getElementById('btnHi');
+  const btnLo = document.getElementById('btnLo');
+  const btnDeal = document.getElementById('btnDeal');
+
+  function label(v) {
+    return v <= 10 ? String(v) : LABEL[v];
+  }
+
+  function draw() {
+    return RANKS[Math.floor(Math.random() * RANKS.length)];
+  }
+
+  function setBetButtons() {
+    document.querySelectorAll('#betRow button').forEach(b => {
+      b.classList.toggle('active', +b.dataset.bet === bet);
+      b.disabled = phase === 'play';
+    });
+  }
+
+  document.getElementById('betRow').addEventListener('click', e => {
+    const t = e.target.closest('button[data-bet]');
+    if (!t || phase === 'play') return;
+    bet = +t.dataset.bet;
+    setBetButtons();
+  });
+
+  function renderCard(v) {
+    cardEl.innerHTML = label(v) + '<small>Current card</small>';
+  }
+
+  function deal() {
+    if (balance < bet) {
+      msgEl.textContent = 'Not enough credits — refresh page to reset fun balance.';
+      return;
+    }
+    phase = 'play';
+    current = draw();
+    renderCard(current);
+    msgEl.textContent = 'Will the next card be higher or lower?';
+    btnHi.disabled = false;
+    btnLo.disabled = false;
+    btnDeal.textContent = 'Playing…';
+    btnDeal.disabled = true;
+    setBetButtons();
+  }
+
+  function resolve(higher) {
+    const next = draw();
+    const hi = next > current;
+    const lo = next < current;
+    const win = higher ? hi : lo;
+    const push = next === current;
+
+    renderCard(next);
+    if (push) {
+      msgEl.textContent = 'Push — same rank, bet returned.';
+    } else if (win) {
+      balance += bet;
+      msgEl.textContent = 'You win +' + bet + ' credits!';
+    } else {
+      balance -= bet;
+      msgEl.textContent = 'House wins this one — −' + bet + ' credits.';
+    }
+    balEl.textContent = balance;
+    current = next;
+    phase = 'idle';
+    btnHi.disabled = true;
+    btnLo.disabled = true;
+    btnDeal.textContent = 'Next round / Deal';
+    btnDeal.disabled = false;
+    setBetButtons();
+  }
+
+  btnDeal.addEventListener('click', () => {
+    if (phase === 'play') return;
+    deal();
+  });
+  btnHi.addEventListener('click', () => { if (phase === 'play') resolve(true); });
+  btnLo.addEventListener('click', () => { if (phase === 'play') resolve(false); });
+})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+*, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: lower-alpha;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: all 0.17s ease;
+}
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+#container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#main-container{
+    width: 650px;
+    background: linear-gradient(165deg, #1e293b 0%, #0f172a 100%);
+    color: #e2e8f0;
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(6, 182, 212, 0.1);
+    border-radius: 12px 0 0 12px;
+    margin-right: 0;
+}
+#main-container h1,
+#main-container h4,
+#main-container p {
+    color: #e2e8f0;
+}
+#main-container h1 { color: #06b6d4; font-family: 'Sora', sans-serif; font-weight: 600; }
+#game-rules{
+    width: 400px;
+    background: #1e293b;
+    color: #94a3b8;
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border-radius: 0 12px 12px 0;
+    margin-left: 0;
+}
+#game-rules h1,
+#game-rules ul,
+#game-rules li {
+    color: #e2e8f0;
+}
+#game-rules h1 { color: #06b6d4; font-family: 'Sora', sans-serif; font-weight: 600; }
+
+#game-rules ul li {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+#about, #dice-img-container, #result, #play-btn{
+    margin-bottom: 15px;
+    padding: 10px;
+}
+#dice-img-container img{
+    width: 70px;
+    height: 70px;
+    margin: 8px;
+}
+#play-btn{
+    width: 120px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 16px;
+    background: #06b6d4;
+    color: #0f172a;
+    box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+}
+#play-btn:hover{
+    background: #22d3ee;
+    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+}
+#message,#points{
+    font-size: 18px;
+    font-weight: bold;
+}
+#message{
+    margin-top: 10px;
+}
+
+/* 
+Responsiveness
+*/
+
+@media (max-width: 1048px) {
+    #container {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    #main-container{
+        margin: 0;
+        border-radius: 0;
+        width: 800px;
+    }
+    #game-rules{
+        margin: 0;
+        width: 800px;
+        border-radius: 0;
+        margin-top: 40px;
+    }
+}

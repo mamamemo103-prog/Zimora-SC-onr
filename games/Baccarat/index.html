@@ -1,0 +1,209 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="../../favi.ico">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Velvet Poker Baccarat Royale | Zimora</title>
+
+  </head>
+
+  <body>
+    <div class="back-bar" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.65rem;padding:0.65rem 1rem;background:#06040c;border-bottom:1px solid rgba(183,125,255,0.22);font-family:DM Sans,system-ui,sans-serif;font-size:0.88rem;">
+  <span style="color:#c9c2d8;font-weight:700;"><img src="../../assets/logo.webp" alt="" style="height:22px;vertical-align:middle;margin-right:6px;object-fit:contain">Zimora · Velvet Poker Baccarat Royale</span>
+  <a href="../../games.html" style="color:#5dffc9;text-decoration:none;font-weight:700;">← Zimora lobby</a>
+    </div>
+    <div class="container">
+
+      <h1>
+        <span class="black">&spades;</span>
+        <span class="red">&diams;</span>
+        Velvet Poker Baccarat Royale
+        <span class="black">&clubs;</span>
+        <span class="red">&hearts;</span>
+      </h1>
+
+      <div class="row" id="card-div">
+        <div class="col-sm-6" id="bankerCards"></div>
+        <div class="col-sm-6" id="playerCards"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6" id="banker-text">
+          <h3>Banker</h3>
+        </div>
+        <div class="col-sm-6" id="player-text">
+          <h3>Player</h3>
+        </div>      
+      </div>
+    
+      <form id="form-div">
+        <div class="row">
+          <div class="col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text form-input">Banker</span>
+              </div>
+              <input type="number" value="0" min="0" max="1000" step="50" class="form-control" id="chipInput_B" placeholder="Amount">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text form-input">Banker Pair</span>
+              </div>
+              <input type="number" value="0" min="0" max="1000" step="50" class="form-control" id="chipInput_BP" placeholder="Amount">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text form-input">Player</span>
+              </div>
+              <input type="number" value="0" min="0" max="1000" step="50" class="form-control" id="chipInput_P" placeholder="Amount">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text form-input">Banker Natural 8</span>
+              </div>
+              <input type="number" value="0" min="0" max="1000" step="50" class="form-control" id="chipInput_BN8" placeholder="Amount" disabled>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text form-input">Tie</span>
+              </div>
+              <input type="number" value="0" min="0" max="1000" step="50" class="form-control" id="chipInput_T" placeholder="Amount">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text form-input">Player Natural 8</span>
+              </div>
+              <input type="number" value="0" min="0" max="1000" step="50" class="form-control" id="chipInput_PN8" placeholder="Amount" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text form-input">Banker Natural 9</span>
+              </div>
+              <input type="number" value="0" min="0" max="1000" step="50" class="form-control" id="chipInput_BN9" placeholder="Amount" disabled>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text form-input">Player Pair</span>
+              </div>
+              <input type="number" value="0" min="0" max="1000" step="50" class="form-control" id="chipInput_PP" placeholder="Amount">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text form-input">Player Natural 9</span>
+              </div>
+              <input type="number" value="0" min="0" max="1000" step="50" class="form-control" id="chipInput_PN9" placeholder="Amount" disabled>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+      <div class="card border-light mb-3 mx-auto" id="card-display" style="max-width: 18rem;">
+        <div class="card-header font-weight-bold text-center" id="chip-header">Available Chips</div>
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold text-center" id="chip-title"></h5>
+        </div>
+      </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="payoutLabel">Win table</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table>
+              <tr>
+                <th>Winning Coins</th>
+                <th>Pays</th>
+              </tr>
+              <tr>
+                <td>Banker</td>
+                <td>1 to 1</td>
+              </tr>
+              <tr>
+                <td>Player</td>
+                <td>1 to 1</td>
+              </tr>
+              <tr>
+                <td>Tie</td>
+                <td>8 to 1</td>
+              </tr>
+              <tr>
+                <td>Player or Banker Pair</td>
+                <td>11 to 1</td>
+              </tr>
+              <tr>
+                <td>Player or Banker Natural 8</td>
+                <td>8 to 1</td>
+              </tr>
+              <tr>
+                <td>Player or Banker Natural 9</td>
+                <td>8 to 1</td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="buttons-div">
+      <div class="col" id="buttons-1">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Win table</button>
+        <button type="button" class="btn btn-warning" id="restart-btn" disabled>Restart</button>
+      </div>
+      <div class="col" id="buttons-2">
+        <button type="button" class="btn btn-light btn-lg" id="deal-btn" disabled>Deal</button>
+        <button type="button" class="btn btn-danger btn-lg" id="play-btn">Play</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="setup.js"></script>
+
+  </body>
+
+</html>
