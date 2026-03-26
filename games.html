@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="assets/favi.ico">
+  <meta name="description" content="Zimora game catalog — free social play with virtual coins only. March 2026.">
+  <title>Games — Zimora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="zm-skip" href="#main">Skip to content</a>
+
+  <header class="zm-head" id="top">
+    <div class="zm-wrap zm-head__row">
+      <a class="zm-brand" href="index.html" aria-label="Zimora home">
+        <img src="assets/logo.webp" alt="" width="40" height="40" decoding="async">
+        <span>Zimora</span>
+      </a>
+
+      <nav class="zm-nav" id="zm-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="games.html" class="is-on">Games</a>
+        <a href="about.html">About Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="responsible-play.html">Responsible Play</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="zm-head__tools">
+        <span class="zm-pill">Virtual coins only</span>
+        <button class="zm-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="zm-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="zm-wrap zm-pageHero zm-reveal">
+      <p class="zm-kicker" style="margin-bottom:0.35rem">March 2026 · Catalog</p>
+      <h1 class="zm-h2" style="font-size:clamp(2rem,5vw,2.85rem)">Choose your table</h1>
+      <p class="zm-sub" style="margin-top:0.65rem">Filter the floor, open a title, and stay as long as you like. Everything here is virtual coins for free-to-play entertainment.</p>
+
+      <div class="zm-filters" role="toolbar" aria-label="Game category filters" style="margin-top:1.25rem">
+        <button type="button" class="zm-filter" data-zm-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="zm-filter" data-zm-filter="slots" aria-pressed="false">Slots</button>
+        <button type="button" class="zm-filter" data-zm-filter="roulette" aria-pressed="false">Roulette</button>
+        <button type="button" class="zm-filter" data-zm-filter="blackjack" aria-pressed="false">Blackjack</button>
+        <button type="button" class="zm-filter" data-zm-filter="poker" aria-pressed="false">Poker</button>
+        <button type="button" class="zm-filter" data-zm-filter="wheel" aria-pressed="false">Wheel</button>
+      </div>
+    </div>
+
+    <section class="zm-section" style="padding-top:0.5rem" aria-label="Game list">
+      <div class="zm-wrap">
+        <div class="zm-tiles" id="zm-list">
+          <a class="zm-tile zm-reveal" data-zm-cat="slots" href="games/slot-machine/index.html" aria-label="Play free: Royal Slots Vault Elite">
+            <img class="zm-tile__img" src="assets/game_card_slot.webp" alt="" loading="lazy" decoding="async">
+            <div class="zm-tile__veil"></div>
+            <div class="zm-tile__shine" aria-hidden="true"></div>
+            <span class="zm-tile__ribbon zm-tile__ribbon--hot">Hot</span>
+            <div class="zm-tile__dock">
+              <span class="zm-tile__tag">Free play</span>
+              <h3 class="zm-tile__title">Royal Slots Vault Elite</h3>
+              <p class="zm-tile__meta">Slots · Velocity reels</p>
+              <span class="zm-tile__play">Play free</span>
+            </div>
+          </a>
+
+          <a class="zm-tile zm-reveal" data-zm-cat="roulette" href="games/roulette/index.html" aria-label="Play free: Mega Roulette Spin X">
+            <img class="zm-tile__img" src="assets/roulette.webp" alt="" loading="lazy" decoding="async">
+            <div class="zm-tile__veil"></div>
+            <div class="zm-tile__shine" aria-hidden="true"></div>
+            <span class="zm-tile__ribbon zm-tile__ribbon--new">New</span>
+            <div class="zm-tile__dock">
+              <span class="zm-tile__tag">Virtual coins</span>
+              <h3 class="zm-tile__title">Mega Roulette Spin X</h3>
+              <p class="zm-tile__meta">Roulette · Wheel focus</p>
+              <span class="zm-tile__play">Play free</span>
+            </div>
+          </a>
+
+          <a class="zm-tile zm-reveal" data-zm-cat="blackjack" href="games/blackjack/index.html" aria-label="Play free: Lucky Blackjack Pro Max">
+            <img class="zm-tile__img" src="assets/blackjack.webp" alt="" loading="lazy" decoding="async">
+            <div class="zm-tile__veil"></div>
+            <div class="zm-tile__shine" aria-hidden="true"></div>
+            <span class="zm-tile__ribbon zm-tile__ribbon--pop">Popular</span>
+            <div class="zm-tile__dock">
+              <span class="zm-tile__tag">Free play</span>
+              <h3 class="zm-tile__title">Lucky Blackjack Pro Max</h3>
+              <p class="zm-tile__meta">Blackjack · Clean hits</p>
+              <span class="zm-tile__play">Play free</span>
+            </div>
+          </a>
+
+          <a class="zm-tile zm-reveal" data-zm-cat="poker" href="games/Texas-Holdem/index.html" aria-label="Play free: Royal Poker Hold'em Prime">
+            <img class="zm-tile__img" src="assets/poker.webp" alt="" loading="lazy" decoding="async">
+            <div class="zm-tile__veil"></div>
+            <div class="zm-tile__shine" aria-hidden="true"></div>
+            <span class="zm-tile__ribbon zm-tile__ribbon--new">New</span>
+            <div class="zm-tile__dock">
+              <span class="zm-tile__tag">Virtual coins</span>
+              <h3 class="zm-tile__title">Royal Poker Hold'em Prime</h3>
+              <p class="zm-tile__meta">Poker · Studied reads</p>
+              <span class="zm-tile__play">Play free</span>
+            </div>
+          </a>
+
+          <a class="zm-tile zm-reveal" data-zm-cat="wheel" href="games/hi-lo-lounge/index.html" aria-label="Play free: Golden Wheel Roulette Max">
+            <img class="zm-tile__img" src="assets/playing-card.webp" alt="" loading="lazy" decoding="async">
+            <div class="zm-tile__veil"></div>
+            <div class="zm-tile__shine" aria-hidden="true"></div>
+            <span class="zm-tile__ribbon zm-tile__ribbon--hot">Hot</span>
+            <div class="zm-tile__dock">
+              <span class="zm-tile__tag">Free play</span>
+              <h3 class="zm-tile__title">Golden Wheel Roulette Max</h3>
+              <p class="zm-tile__meta">Wheel · Quick highs &amp; lows</p>
+              <span class="zm-tile__play">Play free</span>
+            </div>
+          </a>
+
+          <a class="zm-tile zm-reveal" data-zm-cat="poker" href="games/Baccarat/index.html" aria-label="Play free: Velvet Poker Baccarat Royale">
+            <img class="zm-tile__img" src="assets/baccarat.webp" alt="" loading="lazy" decoding="async">
+            <div class="zm-tile__veil"></div>
+            <div class="zm-tile__shine" aria-hidden="true"></div>
+            <span class="zm-tile__ribbon zm-tile__ribbon--pop">Popular</span>
+            <div class="zm-tile__dock">
+              <span class="zm-tile__tag">Virtual coins</span>
+              <h3 class="zm-tile__title">Velvet Poker Baccarat Royale</h3>
+              <p class="zm-tile__meta">Poker · Velvet tempo</p>
+              <span class="zm-tile__play">Play free</span>
+            </div>
+          </a>
+
+          <a class="zm-tile zm-reveal" data-zm-cat="wheel" href="games/lucky-flip-lounge/index.html" aria-label="Play free: Royal Wheel Lucky Flip Deluxe">
+            <img class="zm-tile__img" src="assets/game_back.webp" alt="" loading="lazy" decoding="async">
+            <div class="zm-tile__veil"></div>
+            <div class="zm-tile__shine" aria-hidden="true"></div>
+            <span class="zm-tile__ribbon zm-tile__ribbon--new">New</span>
+            <div class="zm-tile__dock">
+              <span class="zm-tile__tag">Free play</span>
+              <h3 class="zm-tile__title">Royal Wheel Lucky Flip Deluxe</h3>
+              <p class="zm-tile__meta">Wheel · Lightning flips</p>
+              <span class="zm-tile__play">Play free</span>
+            </div>
+          </a>
+
+          <a class="zm-tile zm-reveal" data-zm-cat="wheel" href="games/craps-game/index.html" aria-label="Play free: Prism Wheel Dice Stack">
+            <img class="zm-tile__img" src="assets/dice.webp" alt="" loading="lazy" decoding="async">
+            <div class="zm-tile__veil"></div>
+            <div class="zm-tile__shine" aria-hidden="true"></div>
+            <span class="zm-tile__ribbon zm-tile__ribbon--hot">Hot</span>
+            <div class="zm-tile__dock">
+              <span class="zm-tile__tag">Virtual coins</span>
+              <h3 class="zm-tile__title">Prism Wheel Dice Stack</h3>
+              <p class="zm-tile__meta">Wheel · Dice stack energy</p>
+              <span class="zm-tile__play">Play free</span>
+            </div>
+          </a>
+        </div>
+
+        <section class="zm-glass zm-reveal" style="margin-top:2rem;max-width:78ch">
+          <h3 style="margin:0 0 0.5rem;font-family:var(--zm-font-display);font-weight:900">Using the catalog</h3>
+          <ol style="margin:0;padding-left:1.15rem;color:var(--zm-muted);font-weight:550;line-height:1.75">
+            <li>Tap a filter to reshuffle visible lobbies without reloading the page.</li>
+            <li>Hover (or focus) a tile to feel lift, glow, and a gentle image zoom.</li>
+            <li>Remember: Zimora is entertainment-first; virtual coins never hold real-world value.</li>
+          </ol>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="zm-foot">
+    <div class="zm-wrap zm-foot__grid">
+      <div>
+        <div class="zm-foot__brand">
+          <img src="assets/logo.webp" alt="" width="40" height="40" decoding="async">
+          <span>Zimora</span>
+        </div>
+        <p style="margin:0.75rem 0 0;color:var(--zm-muted);max-width:42ch;font-weight:550;line-height:1.65">
+          Browse every lobby with confidence—virtual coins only, updated March <span class="js-year">2026</span>.
+        </p>
+      </div>
+      <div class="zm-foot__links">
+        <div class="zm-foot__col">
+          <h4>Explore</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="zm-foot__col">
+          <h4>Legal</h4>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-use.html">Terms of Use</a>
+          <a href="responsible-play.html">Responsible Play</a>
+        </div>
+      </div>
+    </div>
+    <div class="zm-wrap zm-foot__base">
+      © <span class="js-year">2026</span> Zimora. Free-to-play entertainment. No cash gaming.
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
