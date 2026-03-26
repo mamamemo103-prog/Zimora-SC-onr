@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../../favi.ico">
+  <title>Royal Wheel Lucky Flip Deluxe | Zimora</title>
+  <meta name="description" content="Royal Wheel Lucky Flip Deluxe — heads or tails with virtual coins only. Entertainment only. March 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: radial-gradient(ellipse 100% 80% at 50% -20%, rgba(225, 29, 114, 0.15), transparent 50%),
+        linear-gradient(165deg, #0f172a 0%, #312e81 50%, #0f172a 100%);
+      color: #e2e8f0;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      padding: 0.65rem 1rem;
+      background: #06040c;
+      border-bottom: 1px solid rgba(183, 125, 255, 0.22);
+    }
+    .bar a { color: #5dffc9; text-decoration: none; font-weight: 700; }
+    .bar a:hover { filter: brightness(1.08); }
+    /* Hero art: ../../assets/baccarat.webp — replace baccarat.webp in site /assets for Lucky Flip branding */
+    .lounge-hero {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .lounge-hero img {
+      width: 100%;
+      height: auto;
+      max-height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(225, 29, 114, 0.35);
+      display: block;
+    }
+    .wrap {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.35rem;
+      margin: 0 0 0.25rem;
+      color: #fbbf24;
+    }
+    .sub { font-size: 0.8rem; color: #94a3b8; margin-bottom: 1.25rem; }
+    .panel {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(225, 29, 114, 0.25);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    }
+    .balance { font-weight: 700; color: #22d3ee; margin-bottom: 1rem; }
+    .coin {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #fbbf24 0%, #d97706 50%, #b45309 100%);
+      border: 4px dashed rgba(255,255,255,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #422006;
+      box-shadow: inset 0 2px 0 rgba(255,255,255,0.35), 0 8px 24px rgba(0,0,0,0.45);
+      transition: transform 0.35s ease;
+    }
+    .coin.spin { animation: spin 0.5s ease; }
+    @keyframes spin {
+      to { transform: rotateY(360deg); }
+    }
+    .msg { min-height: 2.5rem; font-size: 0.95rem; color: #cbd5e1; margin-bottom: 1rem; }
+    .bet-row { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
+    .bet-row button {
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      background: rgba(251, 191, 36, 0.1);
+      color: #fbbf24;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .bet-row button.active { background: rgba(251, 191, 36, 0.35); color: #0f172a; }
+    .pick {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .pick button {
+      padding: 1rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: inherit;
+      color: #0f172a;
+    }
+    .pick .heads {
+      background: linear-gradient(180deg, #e2e8f0, #94a3b8);
+    }
+    .pick .tails {
+      background: linear-gradient(180deg, #334155, #1e293b);
+      color: #e2e8f0;
+      border: 1px solid #64748b;
+    }
+    .pick button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .note {
+      margin-top: 1rem;
+      font-size: 0.72rem;
+      color: #64748b;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <span style="color:#c9c2d8;font-size:0.88rem;font-weight:700;">
+  <img src="../../assets/logo.webp" alt="" style="height:22px;vertical-align:middle;margin-right:6px;object-fit:contain">
+  Zimora · Royal Wheel Lucky Flip Deluxe
+  </span>
+  <a href="../../games.html" style="color:#5dffc9;text-decoration:none;font-weight:700;">← Zimora lobby</a>
+  </div>
+  <div class="lounge-hero">
+    <img src="../../assets/baccarat.webp" alt="" width="520" height="300" loading="lazy">
+  </div>
+  <div class="wrap">
+    <h1>Royal Wheel Lucky Flip Deluxe</h1>
+    <p class="sub">Pick a side · Fair 50/50 · Virtual credits only</p>
+    <div class="panel">
+      <div class="balance">Credits: <span id="bal">500</span></div>
+      <div class="coin" id="coin">?</div>
+      <p class="msg" id="msg">Choose heads or tails</p>
+      <div class="bet-row" id="betRow">
+        <button type="button" data-bet="15">15</button>
+        <button type="button" data-bet="30" class="active">30</button>
+        <button type="button" data-bet="60">60</button>
+      </div>
+      <div class="pick">
+        <button type="button" class="heads" id="btnH">Heads</button>
+        <button type="button" class="tails" id="btnT">Tails</button>
+      </div>
+    </div>
+    <p class="note">18+ · Free to play · Entertainment only · Virtual coins only</p>
+  </div>
+  <script>
+(function () {
+  let balance = 500;
+  let bet = 30;
+  let busy = false;
+  const balEl = document.getElementById('bal');
+  const coinEl = document.getElementById('coin');
+  const msgEl = document.getElementById('msg');
+
+  document.querySelectorAll('#betRow button').forEach(b => {
+    b.addEventListener('click', () => {
+      if (busy) return;
+      bet = +b.dataset.bet;
+      document.querySelectorAll('#betRow button').forEach(x => x.classList.toggle('active', +x.dataset.bet === bet));
+    });
+  });
+
+  function flip(choice) {
+    if (busy || balance < bet) {
+      if (balance < bet) msgEl.textContent = 'Not enough credits — refresh to reset fun balance.';
+      return;
+    }
+    busy = true;
+    msgEl.textContent = 'Flipping…';
+    coinEl.classList.add('spin');
+    const outcome = Math.random() < 0.5 ? 'heads' : 'tails';
+    setTimeout(() => {
+      coinEl.classList.remove('spin');
+      coinEl.textContent = outcome === 'heads' ? 'H' : 'T';
+      const win = choice === outcome;
+      if (win) {
+        balance += bet;
+        msgEl.textContent = 'Hit! +' + bet + ' credits.';
+      } else {
+        balance -= bet;
+        msgEl.textContent = 'Miss — −' + bet + ' credits.';
+      }
+      balEl.textContent = balance;
+      busy = false;
+    }, 480);
+  }
+
+  document.getElementById('btnH').addEventListener('click', () => flip('heads'));
+  document.getElementById('btnT').addEventListener('click', () => flip('tails'));
+})();
+  </script>
+</body>
+</html>
